@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="S9Z-2J-uDH">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Game Title View Controller-->
+        <scene sceneID="Dg0-Va-6eh">
+            <objects>
+                <viewController id="S9Z-2J-uDH" customClass="GameTitleViewController" customModule="Kotowaza" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ap0-vH-IGY"/>
+                        <viewControllerLayoutGuide type="bottom" id="d52-G3-KNR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FHb-RI-a0Z">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="コトワザ！（仮）" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cEx-hA-rA1">
+                                <rect key="frame" x="178" y="104" width="312" height="47"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="39"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ClN-2D-tS8">
+                                <rect key="frame" x="272" y="286" width="122" height="30"/>
+                                <state key="normal" title="つづきから"/>
+                                <connections>
+                                    <segue destination="Q5g-rI-V6D" kind="presentation" id="fZJ-c3-ztR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jki-To-j6n">
+                                <rect key="frame" x="272" y="228" width="122" height="30"/>
+                                <state key="normal" title="はじめから"/>
+                                <connections>
+                                    <segue destination="rDb-rK-O04" kind="presentation" id="41j-cN-HQU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cEx-hA-rA1" firstAttribute="centerX" secondItem="FHb-RI-a0Z" secondAttribute="centerX" id="Qht-3F-Jsh"/>
+                            <constraint firstItem="cEx-hA-rA1" firstAttribute="centerY" secondItem="FHb-RI-a0Z" secondAttribute="centerY" constant="-60" id="stJ-zq-JMT"/>
+                        </constraints>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="continueBtn" destination="ClN-2D-tS8" id="0zN-tT-gWN"/>
+                        <outlet property="newGameBtn" destination="jki-To-j6n" id="9Za-X4-1bt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y3z-ct-oSt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139.5" y="-95.5"/>
+        </scene>
+        <!--Battle View Controller-->
+        <scene sceneID="qV4-OB-0oz">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" id="Q5g-rI-V6D" customClass="BattleViewController" customModule="Kotowaza" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kMa-xX-IoG"/>
+                        <viewControllerLayoutGuide type="bottom" id="TZz-ng-r32"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="l65-Lz-Onu">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZCd-cO-EpM" customClass="GameTextsView" customModule="Kotowaza" customModuleProvider="target">
+                                <rect key="frame" x="20" y="245" width="627" height="130"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="fP8-1U-dOS"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="izq-Q0-8nm" customClass="SKView">
+                                <rect key="frame" x="20" y="0.0" width="627" height="245"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="noZ-Vj-RG9">
+                                <rect key="frame" x="597" y="0.0" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="CEf-nl-omD"/>
+                                    <constraint firstAttribute="width" constant="30" id="VR9-gQ-7md"/>
+                                </constraints>
+                                <state key="normal" title="!!!"/>
+                                <connections>
+                                    <action selector="tapPauseBtn:" destination="Q5g-rI-V6D" eventType="touchUpInside" id="6Xq-4j-J0h"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.40000000596046448" green="1" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZCd-cO-EpM" firstAttribute="leading" secondItem="l65-Lz-Onu" secondAttribute="leading" constant="20" id="5Dy-lf-ggt"/>
+                            <constraint firstItem="TZz-ng-r32" firstAttribute="top" secondItem="ZCd-cO-EpM" secondAttribute="bottom" id="8ji-uL-yXg"/>
+                            <constraint firstAttribute="trailing" secondItem="izq-Q0-8nm" secondAttribute="trailing" constant="20" id="M91-yQ-435"/>
+                            <constraint firstItem="izq-Q0-8nm" firstAttribute="top" secondItem="l65-Lz-Onu" secondAttribute="top" id="U44-Db-o3P"/>
+                            <constraint firstItem="ZCd-cO-EpM" firstAttribute="top" secondItem="izq-Q0-8nm" secondAttribute="bottom" id="Wii-O7-sbu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="noZ-Vj-RG9" secondAttribute="trailing" constant="20" id="XXr-ai-j3c"/>
+                            <constraint firstItem="noZ-Vj-RG9" firstAttribute="top" secondItem="l65-Lz-Onu" secondAttribute="topMargin" id="Y1N-WS-ktq"/>
+                            <constraint firstAttribute="trailing" secondItem="ZCd-cO-EpM" secondAttribute="trailing" constant="20" id="gVn-r7-woh"/>
+                            <constraint firstItem="izq-Q0-8nm" firstAttribute="leading" secondItem="l65-Lz-Onu" secondAttribute="leading" constant="20" id="tSx-HD-Kd5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="battleView" destination="izq-Q0-8nm" id="YE9-dm-GMx"/>
+                        <outlet property="novelView" destination="ZCd-cO-EpM" id="J8W-Z6-kRY"/>
+                        <outlet property="pauseBtn" destination="noZ-Vj-RG9" id="6yL-y3-4yC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x3j-E1-5sb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1000.5" y="-306.5"/>
+        </scene>
+        <!--Drama View Controller-->
+        <scene sceneID="ewH-OM-aWF">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" id="rDb-rK-O04" customClass="DramaViewController" customModule="Kotowaza" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="etQ-3M-4ed"/>
+                        <viewControllerLayoutGuide type="bottom" id="G0o-dk-C6r"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TNO-4p-SDe">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vCN-q8-yad">
+                                <rect key="frame" x="316" y="173" width="34" height="30"/>
+                                <state key="normal" title="back"/>
+                                <connections>
+                                    <action selector="tapBackBtn:" destination="rDb-rK-O04" eventType="touchUpInside" id="uxQ-VZ-sYq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yRk-yp-s19">
+                                <rect key="frame" x="617" y="0.0" width="30" height="30"/>
+                                <state key="normal" title="!!!"/>
+                                <connections>
+                                    <action selector="tapPauseBtn:" destination="rDb-rK-O04" eventType="touchUpInside" id="uou-kn-CW5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yRk-yp-s19" firstAttribute="trailing" secondItem="TNO-4p-SDe" secondAttribute="trailingMargin" id="1B9-CO-pQ4"/>
+                            <constraint firstItem="vCN-q8-yad" firstAttribute="centerX" secondItem="TNO-4p-SDe" secondAttribute="centerX" id="EDc-1A-cF7"/>
+                            <constraint firstItem="yRk-yp-s19" firstAttribute="top" secondItem="TNO-4p-SDe" secondAttribute="topMargin" id="Gvf-nf-loU"/>
+                            <constraint firstItem="vCN-q8-yad" firstAttribute="centerY" secondItem="TNO-4p-SDe" secondAttribute="centerY" id="Psy-oU-Er7"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XvI-1Q-O0y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1000.5" y="214.5"/>
+        </scene>
+    </scenes>
+</document>

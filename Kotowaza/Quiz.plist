@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>1</key>
+	<dict>
+		<key>question</key>
+		<array>
+			<string>あれは小学校５年の頃だった。なにもかもに嫌気がさした俺は、神社の灯篭をことごとくなぎ倒した。</string>
+			<string>今思えばバカなことをしたとわかっている。けれど、あの時の俺にはその衝動を抑えることはできなかった…！</string>
+			<string>それからさ、『灯篭のギンジ』なんてふざけた呼ばれ方をされるようになったのはな…。</string>
+			<string>全く悪いことってのは、どうしてこうもすぐに広まっちまうもんかね…！！</string>
+		</array>
+		<key>selection</key>
+		<array>
+			<string>年寄りの冷や水</string>
+			<string>犬も歩けば棒にあたる</string>
+			<string>悪事千里を走る</string>
+			<string>門前の小僧習わぬ経を読む</string>
+		</array>
+		<key>answer</key>
+		<integer>2</integer>
+	</dict>
+	<key>2</key>
+	<dict>
+		<key>question</key>
+		<array>
+			<string>早起きすると、いいことあるよね？</string>
+		</array>
+		<key>selection</key>
+		<array>
+			<string>聞いて極楽見て地獄</string>
+			<string>早起きは三文の得</string>
+			<string>論より証拠</string>
+			<string>暖簾に腕押し</string>
+		</array>
+		<key>answer</key>
+		<integer>1</integer>
+	</dict>
+	<key>3</key>
+	<dict>
+		<key>question</key>
+		<array>
+			<string>見せかけであり、結局は変わらないこと</string>
+		</array>
+		<key>selection</key>
+		<array>
+			<string>風林火山</string>
+			<string>一日千秋</string>
+			<string>危機一髪</string>
+			<string>朝三暮四</string>
+		</array>
+		<key>answer</key>
+		<integer>3</integer>
+	</dict>
+</dict>
+</plist>
